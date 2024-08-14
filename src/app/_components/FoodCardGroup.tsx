@@ -8,7 +8,7 @@ const FoodCardGroup = () => {
       <div className="grid w-[800vw] grid-cols-8 gap-4 sm:w-[400vw] md:w-full md:grid-cols-4 md:px-5">
         {foodCardData.map((data) => {
           return (
-            <Card className="col-span-1 border-none bg-gray-100 shadow-none">
+            <Card key={data.title} className="col-span-1 border-none bg-gray-100 shadow-none">
               <CardHeader className="h-[13rem] w-full p-0">
                 <img
                   className="h-full w-full rounded-sm object-cover"

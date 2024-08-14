@@ -1,0 +1,88 @@
+[
+    {
+      "type": "Apartment",
+      "status": "Active",
+      "name": "Cozy Downtown Apartment",
+      "description": "A small, cozy apartment in the heart of the city.",
+      "street": "123 Main St",
+      "city": "New York",
+      "province": "NY",
+      "approve": "Approved",
+      "price": 3200,
+      "Amenties": ["Wi-Fi", "Air Conditioning", "Heating"],
+      "images": [
+        {
+          "url": ""
+        }
+      ]
+    },
+    {
+      "type": "House",
+      "status": "Active",
+      "name": "Suburban Family Home",
+      "description": "A spacious family home with a large backyard.",
+      "street": "456 Elm St",
+      "city": "Los Angeles",
+      "province": "CA",
+      "approve": "Pending",
+      "price": 7500,
+      "Amenties": ["Garage", "Backyard", "Fireplace"],
+      "images": [
+        {
+          "url": ""
+        }
+      ]
+    },
+    {
+      "type": "Condo",
+      "status": "Active",
+      "name": "Luxury High-Rise Condo",
+      "description": "A luxury condo with a view of the city skyline.",
+      "street": "789 Pine St",
+      "city": "Chicago",
+      "province": "IL",
+      "approve": "Approved",
+      "price": 8900,
+      "Amenties": ["Gym", "Pool", "Concierge"],
+      "images": [
+        {
+          "url": ""
+        }
+      ]
+    },
+    {
+      "type": "Townhouse",
+      "status": "Active",
+      "name": "Modern Townhouse",
+      "description": "A modern townhouse in a quiet neighborhood.",
+      "street": "101 Maple Ave",
+      "city": "San Francisco",
+      "province": "CA",
+      "approve": "Pending",
+      "price": 4200,
+      "Amenties": ["Private Garage", "Balcony", "Smart Home"],
+      "images": [
+        {
+          "url": ""
+        }
+      ]
+    },
+    {
+      "type": "Villa",
+      "status": "Active",
+      "name": "Seaside Villa",
+      "description": "A beautiful villa with a view of the ocean.",
+      "street": "202 Ocean Dr",
+      "city": "Miami",
+      "province": "FL",
+      "approve": "Approved",
+      "price": 6700,
+      "Amenties": ["Private Pool", "Garden", "Beach Access"],
+      "images": [
+        {
+          "url": ""
+        }
+      ]
+    }
+  ]
+  

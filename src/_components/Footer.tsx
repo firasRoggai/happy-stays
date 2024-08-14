@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const navigation = {
   connect: [
@@ -19,7 +20,7 @@ const navigation = {
   ],
 };
 
-export const TwoColumnFooter = () => {
+export const Footer = () => {
   return (
     <footer
       aria-labelledby="footer-heading"
@@ -45,8 +46,7 @@ export const TwoColumnFooter = () => {
             </p>
             <div className="flex space-x-6 text-sm text-gray-700  dark:text-gray-300">
               <div>
-                Made with ❤️ by Students of the university of Mohamed Echrif
-                Messadia
+                Made with ❤️ by <Link href={"https://firasroggai.netlify.app/"} className="underline">Firas Roggai</Link>
               </div>
             </div>
           </div>
@@ -102,4 +102,4 @@ export const TwoColumnFooter = () => {
   );
 };
 
-export default TwoColumnFooter;
+export default Footer;

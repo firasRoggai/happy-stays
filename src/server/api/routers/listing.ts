@@ -1,3 +1,5 @@
+import { readFileSync } from "fs";
+import path from "path";
 import { z } from "zod";
 
 import {
@@ -248,4 +250,42 @@ export const listingrouter = createTRPCRouter({
         });
       },
     ),
+
+    // temp
+    importListings: protectedProcedure
+    .input(z.string().optional()) // Optional input for custom JSON file path
+    .mutation(async ({ ctx, input }) => {
+      // Default file path or use the provided input
+      const filePath = input || path.join(process.cwd(), "listings.json");
+
+      // Read and parse the JSON file
+      const data = JSON.parse(readFileSync(filePath, "utf-8"));
+
+      // Iterate over each listing in the JSON file and create it in the database
+      const createdListings = await Promise.all(
+        data.map(async (listing: any) => {
+          return ctx.db.listing.create({
+            data: {
+              name: listing.name,
+              description: listing.description,
+              street: listing.street,
+              city: listing.city,
+              province: listing.province,
+              type: listing.type,
+              status: listing.status || "Active",
+              price: listing.price || 0,
+              Amenties: listing.Amenties,
+              approve: listing.approve || "Pending",
+              createdBy: {
+                connect: {
+                  id: ctx.session.user.id,
+                },
+              },
+            },
+          });
+        })
+      );
+
+      return createdListings;
+    }),
 });

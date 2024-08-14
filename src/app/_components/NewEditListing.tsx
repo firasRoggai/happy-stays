@@ -1,7 +1,7 @@
 "use client";
 //UI
 import Image from "next/image";
-import { CalendarIcon, ChevronLeft, Upload, XIcon } from "lucide-react";
+import { CalendarIcon, ChevronLeft, Loader2, Upload, XIcon } from "lucide-react";
 import { Button } from "~/_components/ui/button";
 import {
   Card,
@@ -65,9 +65,10 @@ export function EditListing({ existingListing }: ListingFormProps) {
     resolver: zodResolver(listingInput),
     defaultValues: { ...existingListing, price: Number(existingListing.price) },
   });
-  const { mutate: updateListing, isSuccess } = api.listing.update.useMutation();
+  const { mutate: updateListing, isLoading ,isSuccess } = api.listing.update.useMutation();
   //const createImage = api.images.create.useMutation();
   const revalidate = api.useUtils();
+
   const onSubmit = async (data: TlistingInput) => {
     updateListing({
       id: existingListing.id,
@@ -128,7 +129,7 @@ export function EditListing({ existingListing }: ListingFormProps) {
                       Discard
                     </Button>
                     <Button size="sm" type="submit">
-                      Save Changes
+                      {isLoading ? <div className="w-[4.6rem] grid justify-center"><Loader2 className="animate-spin"></Loader2></div> : "Save Changes"}
                     </Button>
                   </div>
                 </div>

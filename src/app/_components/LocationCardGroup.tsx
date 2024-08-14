@@ -15,14 +15,14 @@ const LocationCardGroup = async () => {
 
   return (
     <div className="w-full overflow-x-scroll md:overflow-x-hidden">
-      <div className="flex w-[400vw] justify-center gap-5 md:w-full pl-16 md:pl-0 md:px-5">
+      <div className="grid w-[800vw] grid-cols-8 gap-4 sm:w-[400vw] md:w-full md:grid-cols-4 md:px-5">
         {listings.map((data) => {
           return (
-            <Link href={`/listings/${data.id}`}>
-              <Card className="w-[100vw] border-none bg-gray-100 shadow-none md:w-auto">
-                <CardHeader className="w-full p-0">
+            <Link key={data.id} href={`/listings/${data.id}`}>
+              <Card  className="col-span-1 border-none bg-gray-100 shadow-none">
+                <CardHeader className="h-[13rem] w-full p-0">
                   <img
-                    className="h-[13rem] w-auto rounded-sm object-cover"
+                    className="h-full w-full rounded-sm object-cover"
                     src={data.images[0]?.url}
                   />
                 </CardHeader>
