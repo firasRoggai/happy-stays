@@ -30,7 +30,7 @@ const FoodDisplay = () => {
           Top-Rated Places In Algeria
         </h1>
         <p className="py-2 capitalize text-gray-500">
-          Explore Trendsetting villas across the glod for unforgettable escapes
+          Explore Trendsetting villas across the country for unforgettable escapes
         </p>
         <div className="flex justify-between gap-2 py-4">
           <div className="hidden gap-2 md:flex">
