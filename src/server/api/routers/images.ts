@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 import { createTRPCRouter, protectedProcedure } from "~/server/api/trpc";
-import { imageInput } from "~/types";
+import { imageInput } from "~/_components/ui/types";
 
 export const imagesrouter = createTRPCRouter({
   create: protectedProcedure

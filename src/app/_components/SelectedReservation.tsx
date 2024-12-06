@@ -29,7 +29,7 @@ import {
   PaginationItem,
 } from "~/_components/ui/pagination";
 import { Separator } from "~/_components/ui/separator";
-import { type SingleReservation } from "~/types";
+import { type SingleReservation } from "~/_components/ui/types";
 
 interface SelectedReservationProps {
   currentSelectedReservation: SingleReservation;

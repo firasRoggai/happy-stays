@@ -30,7 +30,7 @@ import {
 } from "~/_components/ui/popover";
 import { Calendar } from "~/_components/ui/calendar";
 
-import { listingInput, type ListingEditRequired } from "~/types";
+import { listingInput, type ListingEditRequired } from "~/_components/ui/types";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { type z } from "zod";

@@ -7,7 +7,7 @@ import {
   protectedProcedure,
   publicProcedure,
 } from "~/server/api/trpc";
-import { approveInput, listingInput } from "~/types";
+import { approveInput, listingInput } from "~/_components/ui/types";
 
 export const listingrouter = createTRPCRouter({
   all: publicProcedure

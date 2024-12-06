@@ -3,7 +3,7 @@ import {
   protectedProcedure,
   publicProcedure,
 } from "~/server/api/trpc";
-import { userInput } from "~/types";
+import { userInput } from "~/_components/ui/types";
 
 export const userRouter = createTRPCRouter({
   update: protectedProcedure

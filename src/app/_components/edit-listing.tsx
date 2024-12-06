@@ -7,7 +7,7 @@ import { type z } from "zod";
 import { AspectRatio } from "~/_components/ui/aspect-ratio";
 import { api } from "~/trpc/react";
 
-import { listingInput, type ListingEditRequired } from "~/types";
+import { listingInput, type ListingEditRequired } from "~/_components/ui/types";
 import { UploadDropzone } from "~/utils/uploadthing";
 
 interface ListingFormProps extends React.HTMLAttributes<HTMLFormElement> {

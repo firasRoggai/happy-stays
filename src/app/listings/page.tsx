@@ -7,7 +7,7 @@ import { useSearchParams } from "next/navigation";
 import { Button } from "~/_components/ui/button";
 import { Skeleton } from "~/_components/ui/skeleton";
 import { api } from "~/trpc/react";
-import { type FiltredListing } from "~/types";
+import { type FiltredListing } from "~/_components/ui/types";
 import SearchBar from "../_components/SearchBar";
 
 const ListingDisplay = ({ listing }: { listing: FiltredListing }) => {

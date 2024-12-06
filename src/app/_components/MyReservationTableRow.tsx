@@ -26,7 +26,7 @@ import {
 import { TableCell, TableRow } from "~/_components/ui/table";
 import { toast } from "~/_components/ui/use-toast";
 import { api } from "~/trpc/react";
-import { type UserReservation } from "~/types";
+import { type UserReservation } from "~/_components/ui/types";
 interface MyReservationTableRowProps {
   Reservation: UserReservation;
 }

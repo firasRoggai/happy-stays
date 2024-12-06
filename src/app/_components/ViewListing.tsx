@@ -46,8 +46,8 @@ import { Form, FormField, FormItem } from "~/_components/ui/form";
 import { useToast } from "~/_components/ui/use-toast";
 import { api } from "~/trpc/react";
 import AttendanceSelector from "./AttendanceSelector";
-import { type SingleListing } from "~/types";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "~/components/ui/accordion";
+import { type SingleListing } from "~/_components/ui/types";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "~/_components/ui/accordion";
 type datesDB = {
   startDate: Date;
   endDate: Date;

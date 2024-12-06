@@ -28,7 +28,7 @@ import {
   FormLabel,
   FormMessage,
 } from "./ui/form";
-import { userInput } from "~/types";
+import { userInput } from "~/_components/ui/types";
 
 interface UserNameFormProps extends React.HTMLAttributes<HTMLFormElement> {
   user: Pick<User, "id" | "name" | "phone" | "email">;

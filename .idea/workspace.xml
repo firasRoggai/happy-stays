@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="84fe3592-db82-4a7a-b099-0dffe47138f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_components/UserNameForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/_components/UserNameForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin/reservations/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin/reservations/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_components/Listing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_components/Listing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_components/MyReservationTableRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_components/MyReservationTableRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_components/NewEditListing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_components/NewEditListing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_components/SelectedReservation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_components/SelectedReservation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_components/ViewListing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_components/ViewListing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_components/edit-listing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_components/edit-listing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/listings/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/listings/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/accordion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/_components/ui/accordion.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/skeleton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/api/routers/images.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/api/routers/images.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/api/routers/listing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/api/routers/listing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/api/routers/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/api/routers/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/_components/ui/types.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2poLzBQicY8AbB4T2Kj1qovBNA8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Mido Camera/Desktop/Work/practice/happyStays",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Mido Camera\\Desktop\\Work\\practice\\happyStays\\node_modules\\prettier",
+    "ts.external.directory.path": "C:\\Users\\Mido Camera\\Desktop\\Work\\practice\\happyStays\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mido Camera\Desktop\Work\practice\happyStays\src\_components\ui" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84fe3592-db82-4a7a-b099-0dffe47138f1" name="Changes" comment="" />
+      <created>1733427741947</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733427741947</updated>
+      <workItem from="1733427743314" duration="4627000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/config/site.ts</url>
+          <line>15</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

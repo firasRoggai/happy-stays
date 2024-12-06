@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { type ListingEditRequired } from "~/types";
+import { type ListingEditRequired } from "~/_components/ui/types";
 type listingProps = {
   listing: ListingEditRequired;
 };

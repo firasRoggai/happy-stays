@@ -37,7 +37,7 @@ import ReservationsTableAdmin from "~/app/_components/ReservationsTableAdmin";
 import { useEffect, useState } from "react";
 import SelectedReservation from "~/app/_components/SelectedReservation";
 import { api } from "~/trpc/react";
-import { type SingleReservation } from "~/types";
+import { type SingleReservation } from "~/_components/ui/types";
 import { AdminMonth, AdminWeek } from "~/app/_components/Numbers";
 
 export default function Reservations() {
