@@ -1,4 +1,4 @@
-import DashboardHeader  from "~/app/_components/header";
+import DashboardHeader from "~/app/_components/DashboardHeader";
 import { Listingcreatebutton } from "~/app/_components/listing-create-button";
 import { ListingItem } from "~/app/_components/listing-item";
 import { DashboardShell } from "~/app/_components/shell";
