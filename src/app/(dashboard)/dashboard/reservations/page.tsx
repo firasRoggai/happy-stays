@@ -8,23 +8,21 @@ import {
   Baby,
   UserRound,
 } from "lucide-react";
-import { Button } from "~/_components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "~/_components/ui/card";
+} from "~/app/_components/ui/card";
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "~/_components/ui/table";
-import { DashboardShell } from "~/_components/shell";
-import { DashboardHeader } from "~/_components/header";
+} from "~/app/_components/ui/table";
+import { DashboardShell } from "~/app/_components/shell";
 import AllStays from "~/app/_components/AllStays";
 import ReservationsTable from "~/app/_components/ReservationsTable";
 import AllReservationNumber, {
@@ -33,6 +31,8 @@ import AllReservationNumber, {
   TotalRevenue,
 } from "~/app/_components/Numbers";
 import ActiveStays from "~/app/_components/Numbers";
+import { Button } from "~/app/_components/ui/button";
+import DashboardHeader from "~/app/_components/DashboardHeader";
 
 export default async function Reservations() {
   return (
@@ -99,7 +99,7 @@ export default async function Reservations() {
               </CardContent>
             </Card>
           </div>
-          <div className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 md:gap-4 lg:grid-cols-2 xl:grid-cols-3">
             <Card className="xl:col-span-2" x-chunk="dashboard-01-chunk-4">
               <CardHeader className="flex flex-row items-center">
                 <div className="grid gap-2">

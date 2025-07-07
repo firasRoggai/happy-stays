@@ -2,7 +2,7 @@
 import { MapPin, SearchIcon } from "lucide-react";
 import Select, { components } from "react-select";
 import jsonProvincesOptions from "~/data/provinces.json";
-import { formType } from "./SearchBar";
+import type { formType } from "./SearchBar";
 
 // Select options
 const options = jsonProvincesOptions;
@@ -31,10 +31,11 @@ const Option = (props: any) => {
 };
 
 const LocationSelect = ({ form }: { form: formType }) => {
+
   return (
     <Select
       onChange={(value) => {
-        form.setValue("locationSelect", value ?? { label: "", value: "" });
+        form.setValue("locationSelect", value);
       }}
       defaultValue={form.getValues("locationSelect")}
       isClearable={true}
@@ -42,6 +43,7 @@ const LocationSelect = ({ form }: { form: formType }) => {
       styles={{
         input: (styles) => ({ ...styles, height: "40px" }),
         menuList: (styles) => ({ ...styles, zIndex: "100" }),
+
         indicatorsContainer: (styles) => ({
           ...styles,
           paddingInline: "0",

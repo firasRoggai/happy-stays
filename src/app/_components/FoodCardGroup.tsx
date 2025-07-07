@@ -1,5 +1,5 @@
 import { MapPin, Star } from "lucide-react";
-import { Card, CardContent, CardHeader } from "~/_components/ui/card";
+import { Card, CardContent, CardHeader } from "./ui/card";
 import { foodCardData } from "~/config/site";
 
 const FoodCardGroup = () => {

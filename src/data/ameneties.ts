@@ -1,5 +1,5 @@
 import { type LucideIcon } from "lucide-react";
-import { Icons } from "~/_components/icons";
+import { Icons } from "~/app/_components/icons";
 
 export interface Amenity {
   id: number;

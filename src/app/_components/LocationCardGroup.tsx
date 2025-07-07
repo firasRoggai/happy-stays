@@ -1,12 +1,11 @@
 import { MapPin, Star } from "lucide-react";
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "~/_components/ui/card";
+// import {
+//   Card,
+
+// } from "~/app/_components/ui/card";
 import { api } from "~/trpc/server";
+import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 
 
 const LocationCardGroup = async () => {
@@ -19,7 +18,7 @@ const LocationCardGroup = async () => {
         {listings.map((data) => {
           return (
             <Link key={data.id} href={`/listings/${data.id}`}>
-              <Card  className="col-span-1 border-none bg-gray-100 shadow-none">
+              <Card className="col-span-1 border-none bg-gray-100 shadow-none">
                 <CardHeader className="h-[13rem] w-full p-0">
                   <img
                     className="h-full w-full rounded-sm object-cover"

@@ -4,11 +4,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { type z } from "zod";
-import { AspectRatio } from "~/_components/ui/aspect-ratio";
+import { AspectRatio } from "./ui/aspect-ratio";
 import { api } from "~/trpc/react";
 
-import { listingInput, type ListingEditRequired } from "~/_components/ui/types";
 import { UploadDropzone } from "~/utils/uploadthing";
+import type { ListingEditRequired, listingInput } from "./ui/types";
 
 interface ListingFormProps extends React.HTMLAttributes<HTMLFormElement> {
   existingListing: ListingEditRequired;
@@ -66,12 +66,12 @@ export default function EditListing({ existingListing }: ListingFormProps) {
         <div>
           <label>adress</label>
           <input
-            {...register("address")}
-            defaultValue={`${existingListing.address}`}
+            {...register("city")}
+            defaultValue={`${existingListing.city}`}
             className="w-full rounded-full px-4 py-2 text-black"
           />
-          {errors.address && (
-            <p className="text-red-500">{`${errors.address.message}`}</p>
+          {errors.city && (
+            <p className="text-red-500">{`${errors.city.message}`}</p>
           )}
         </div>
 

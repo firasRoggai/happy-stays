@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  CalendarDays,
-  MoveRightIcon,
-  UserRound
-} from "lucide-react";
-import { useEffect, useReducer, useState } from "react";
-import { Button } from "~/_components/ui/button";
+import { CalendarDays, MoveRightIcon, UserRound } from "lucide-react";
 
 // calender
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,78 +8,85 @@ import { format } from "date-fns";
 import { UseFormReturn, useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Calendar } from "~/_components/ui/calendar";
-
-import dayjs from "dayjs";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Form, FormControl, FormField, FormItem } from "~/_components/ui/form";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "~/_components/ui/popover";
+
 import { cn } from "~/lib/utils";
 import AttendanceSelector from "./AttendanceSelector";
 import LocationSelect from "./LocationSelect";
+import { Button } from "./ui/button";
+import { Calendar } from "./ui/calendar";
+import { Form, FormControl, FormField, FormItem } from "./ui/form";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 const FormSchema = z.object({
   datePicker: z.object({
     from: z.date({
       required_error: "A start date is required.",
     }),
-    to: z.date({
-      required_error: "An end date is required.",
-    }),
+    to: z
+      .date({
+        required_error: "An end date is required.",
+      })
+      .optional(),
   }),
-  locationSelect: z.object({
-    value: z.string(),
-    label: z.string(),
-  }),
-  attendanceSelector: z.object({
-    adults: z.number(),
-    children: z.number(),
-    rooms: z.number(),
-  }),
+  locationSelect: z
+    .object({
+      value: z.string(),
+      label: z.string(),
+    })
+    .nullable()
+    .optional(),
+  attendanceSelector: z
+    .object({
+      adults: z.number().nullable(),
+      children: z.number().nullable(),
+      rooms: z.number().nullable(),
+    })
+    .optional(),
 });
 
 export type formType = UseFormReturn<z.infer<typeof FormSchema>>;
 
 const SearchBar = () => {
-
-  const searchParams = useSearchParams()
-  const router = useRouter()
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
   const defaultValues = (searchParams: any) => {
-    if (searchParams.get("start") == "undefined") {
+    if (searchParams.get("start")) {
       return {
-        locationSelect: { label: "", value: "" },
-        attendanceSelector: { adults: 1, children: 0, rooms: 1 },
+        locationSelect: {
+          label: searchParams.get("location") || "",
+          value: searchParams.get("location") || "",
+        },
+        attendanceSelector: {
+          adults: Number(searchParams.get("adults")) || null,
+          children: Number(searchParams.get("children")) || null,
+          rooms: Number(searchParams.get("rooms")) || null,
+        },
+        datePicker: {
+          from: searchParams.get("start")
+            ? new Date(searchParams.get("start")!)
+            : undefined,
+          to: searchParams.get("end")
+            ? new Date(searchParams.get("end")!)
+            : undefined,
+        },
+      };
+    } else
+      return {
+        locationSelect: null,
+        attendanceSelector: { adults: null, children: null, rooms: null },
         datePicker: {
           from: undefined,
           to: undefined,
         },
-      }
-    }
-    else return {
-      locationSelect: { label: searchParams.get("location") || "", value: searchParams.get("location") || "" },
-      attendanceSelector: { adults: Number(searchParams.get("adults")) || 1, children: Number(searchParams.get("children")) || 0, rooms: Number(searchParams.get("rooms")) || 1 },
-      datePicker: {
-        from: searchParams.get("start") ? new Date(searchParams.get("start")!) : undefined,
-        to: searchParams.get("end") ? new Date(searchParams.get("end")!) : undefined,
-      },
-    }
-  }
+      };
+  };
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: defaultValues(searchParams),
   });
-
-  console.log("form.getValues()");
-  console.log(typeof searchParams.get("start"));
-
-
-  form.watch();
 
   return (
     <>
@@ -175,20 +176,35 @@ const SearchBar = () => {
           <Button
             onClick={() => {
               const formValues = form.getValues();
+              interface searchObjectInterface {
+                rooms?: any;
+                adults?: any;
+                children?: any;
+                location?: any;
+                start?: any;
+                end?: any;
+              }
 
-              const searchObject = {
-                rooms: formValues.attendanceSelector.rooms,
-                adults: formValues.attendanceSelector.adults,
-                children: formValues.attendanceSelector.children,
-                location: formValues.locationSelect.label,
+              const searchObject: searchObjectInterface = {
+                rooms: formValues?.attendanceSelector?.rooms,
+                adults: formValues?.attendanceSelector?.adults,
+                children: formValues?.attendanceSelector?.children,
+                location: formValues?.locationSelect?.label,
                 start: formValues.datePicker.from,
                 end: formValues.datePicker.to,
+              };
+
+              for (const key in searchObject) {
+                if (
+                  searchObject[key as keyof searchObjectInterface] == undefined
+                )
+                  delete searchObject[key as keyof searchObjectInterface];
               }
 
               // @ts-ignore
               const url = new URLSearchParams(searchObject).toString();
 
-              router.push(`/listings?${url}`)
+              router.push(`/listings?${url}`);
             }}
             variant={"default"}
             className="h-full w-full  bg-pink-500 text-lg font-bold hover:bg-pink-600"

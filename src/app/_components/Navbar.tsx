@@ -6,8 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 // components
-import { Button } from "~/_components/ui/button";
-import { UserAccountNav } from "~/_components/user-account-nav";
+import { UserAccountNav } from "~/app/_components/user-account-nav";
 
 // assets
 import {
@@ -25,6 +24,7 @@ import {
 } from "lucide-react";
 import unitedStatesIcon from "~/app/assets/united-states.png";
 import { type Session } from "next-auth";
+import { Button } from "./ui/button";
 
 const MobileMenuConf = {
   list: [

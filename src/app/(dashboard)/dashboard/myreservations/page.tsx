@@ -1,25 +1,15 @@
 "use client";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "~/_components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "~/_components/ui/table";
-import { DashboardShell } from "~/_components/shell";
-import { DashboardHeader } from "~/_components/header";
+
+import { DashboardShell } from "~/app/_components/shell";
 
 import MyReservationTableRow from "~/app/_components/MyReservationTableRow";
 import { api } from "~/trpc/react";
-import { EmptyPlaceholder } from "~/_components/empty-placeholder";
-import { Button } from "~/_components/ui/button";
 import { useRouter } from "next/navigation";
+import { Card, CardContent, CardFooter, CardHeader } from "~/app/_components/ui/card";
+import DashboardHeader from "~/app/_components/DashboardHeader";
+import { Table, TableBody, TableHead, TableHeader, TableRow } from "~/app/_components/ui/table";
+import { EmptyPlaceholder } from "~/app/_components/empty-placeholder";
+import { Button } from "~/app/_components/ui/button";
 
 export default function Reservations() {
   const { data: userReservations } =

@@ -4,13 +4,15 @@ import { AirVent, ChevronRight, DollarSign, Heart, Home, MapPin } from "lucide-r
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Button } from "~/_components/ui/button";
-import { Skeleton } from "~/_components/ui/skeleton";
+import { Button } from "~/app/_components/ui/button";
+import { Skeleton } from "~/app/_components/ui/skeleton";
 import { api } from "~/trpc/react";
-import { type FiltredListing } from "~/_components/ui/types";
+import { type FiltredListing } from "~/app/_components/ui/types";
 import SearchBar from "../_components/SearchBar";
+import ListingsGrid from "../_components/listings/listings-grid";
 
 const ListingDisplay = ({ listing }: { listing: FiltredListing }) => {
+
   return (
     <div className="rounded bg-gray-100 shadow-lg p-3 md:flex">
       <div className="md:w-[35%] relative">
@@ -72,17 +74,7 @@ const Page = () => {
         <p className="px-1 pb-4">Found {data?.length} results</p>
       </div>
       <div className="space-y-4 mb-8">
-        {isLoading ? (
-          <div className="space-y-3">
-            <Skeleton className="h-[80px] w-full" />
-            <Skeleton className="h-[80px] w-full" />
-            <Skeleton className="h-[80px] w-full" />
-          </div>
-        ) : (
-          data?.map((listing) => {
-            return <ListingDisplay key={listing.id} listing={listing} />;
-          })
-        )}
+        <ListingsGrid listings={data ?? []} />
       </div>
     </div>
   );

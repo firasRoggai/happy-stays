@@ -1,9 +1,8 @@
 import { redirect } from "next/navigation";
 
-import { MainNav } from "~/_components/main-nav";
-import { DashboardNav } from "~/_components/nav";
-//import { SiteFooter } from "~/_components/site-footer";
-import { UserAccountNav } from "~/_components/user-account-nav";
+import { MainNav } from "~/app/_components/main-nav";
+import { DashboardNav } from "~/app/_components/nav";
+import { UserAccountNav } from "~/app/_components/user-account-nav";
 import { AdminConfig } from "~/config/admin";
 import { getServerAuthSession } from "~/server/auth";
 

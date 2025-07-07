@@ -3,7 +3,7 @@ import { type Listing } from "@prisma/client";
 
 import { api } from "~/trpc/server";
 import { getServerAuthSession } from "~/server/auth";
-import ViewListing from "~/app/_components/ViewListing";
+import ViewListing from "~/app/_components/listings/singleListing/ViewListing";
 
 async function getListingForUser(id: Listing["id"]) {
   const data = await api.listing.getsingleListing.query(id);
@@ -18,9 +18,10 @@ interface SingleListingPageProps {
   params: { id: string };
 }
 
+
 export default async function Page({ params }: SingleListingPageProps) {
   const session = await getServerAuthSession();
-  const user = session?.user;
+  // const user = session?.user;
 
   const listing = await getListingForUser(params.id);
 

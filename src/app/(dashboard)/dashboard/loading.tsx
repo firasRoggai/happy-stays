@@ -1,7 +1,7 @@
-import { DashboardHeader } from "~/_components/header";
-import { Listingcreatebutton } from "~/_components/listing-create-button";
-import { ListingItem } from "~/_components/listing-item";
-import { DashboardShell } from "~/_components/shell";
+import DashboardHeader from "~/app/_components/DashboardHeader";
+import { Listingcreatebutton } from "~/app/_components/listing-create-button";
+import { ListingItem } from "~/app/_components/listing-item";
+import { DashboardShell } from "~/app/_components/shell";
 
 export default function DashboardLoading() {
   return (

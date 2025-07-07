@@ -7,7 +7,7 @@ import {
   MoreVertical,
 } from "lucide-react";
 import React from "react";
-import { Button } from "~/_components/ui/button";
+import { Button } from "~/app/_components/ui/button";
 import {
   Card,
   CardContent,
@@ -15,21 +15,21 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "~/_components/ui/card";
+} from "~/app/_components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "~/_components/ui/dropdown-menu";
+} from "~/app/_components/ui/dropdown-menu";
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
-} from "~/_components/ui/pagination";
-import { Separator } from "~/_components/ui/separator";
-import { type SingleReservation } from "~/_components/ui/types";
+} from "~/app/_components/ui/pagination";
+import { Separator } from "~/app/_components/ui/separator";
+import { type SingleReservation } from "~/app/_components/ui/types";
 
 interface SelectedReservationProps {
   currentSelectedReservation: SingleReservation;

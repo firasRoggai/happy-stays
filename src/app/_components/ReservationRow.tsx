@@ -1,6 +1,6 @@
 import React from "react";
-import { Badge } from "~/_components/ui/badge";
-import { TableCell, TableRow } from "~/_components/ui/table";
+import { Badge } from "~/app/_components/ui/badge";
+import { TableCell, TableRow } from "~/app/_components/ui/table";
 import { api } from "~/trpc/react";
 interface ReservationRowProps {
   reservationId: string;

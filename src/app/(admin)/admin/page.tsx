@@ -1,8 +1,8 @@
 "use client";
-import { EmptyPlaceholder } from "~/_components/empty-placeholder";
-import { DashboardHeader } from "~/_components/header";
-import { ListingItem } from "~/_components/listing-item";
-import { DashboardShell } from "~/_components/shell";
+import DashboardHeader from "~/app/_components/DashboardHeader";
+import { EmptyPlaceholder } from "~/app/_components/empty-placeholder";
+import { ListingItem } from "~/app/_components/listing-item";
+import { DashboardShell } from "~/app/_components/shell";
 import { api } from "~/trpc/react";
 
 export default function DashboardPage() {

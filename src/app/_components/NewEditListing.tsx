@@ -2,23 +2,23 @@
 //UI
 import Image from "next/image";
 import { CalendarIcon, ChevronLeft, Loader2, Upload, XIcon } from "lucide-react";
-import { Button } from "~/_components/ui/button";
+import { Button } from "~/app/_components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "~/_components/ui/card";
-import { Input } from "~/_components/ui/input";
+} from "~/app/_components/ui/card";
+import { Input } from "~/app/_components/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "~/_components/ui/select";
-import { Textarea } from "~/_components/ui/textarea";
+} from "~/app/_components/ui/select";
+import { Textarea } from "~/app/_components/ui/textarea";
 import { useState } from "react";
 import { type DateRange } from "react-day-picker";
 import { addDays, format } from "date-fns";
@@ -27,10 +27,10 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "~/_components/ui/popover";
-import { Calendar } from "~/_components/ui/calendar";
+} from "~/app/_components/ui/popover";
+import { Calendar } from "~/app/_components/ui/calendar";
 
-import { listingInput, type ListingEditRequired } from "~/_components/ui/types";
+import { listingInput, type ListingEditRequired } from "~/app/_components/ui/types";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { type z } from "zod";
@@ -44,8 +44,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "~/_components/ui/form";
-import { Badge } from "~/_components/ui/badge";
+} from "~/app/_components/ui/form";
+import { Badge } from "~/app/_components/ui/badge";
 import { UploadButton } from "~/utils/uploadthing";
 import amenities, { type Amenity } from "~/data/ameneties";
 

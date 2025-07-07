@@ -1,6 +1,6 @@
 import { getServerAuthSession } from "~/server/auth";
 import Navbar from "../_components/Navbar";
-import Footer from "~/_components/Footer";
+import Footer from "~/app/_components/Footer";
 
 interface ListingsLayoutProps {
   children?: React.ReactNode;

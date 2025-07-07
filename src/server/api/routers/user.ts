@@ -1,9 +1,9 @@
+import { userInput } from "~/app/_components/ui/types";
 import {
   createTRPCRouter,
   protectedProcedure,
   publicProcedure,
 } from "~/server/api/trpc";
-import { userInput } from "~/_components/ui/types";
 
 export const userRouter = createTRPCRouter({
   update: protectedProcedure
@@ -29,6 +29,18 @@ export const userRouter = createTRPCRouter({
         image: true,
         emailVerified: true,
       },
+    });
+  }),
+  AddToFavorite: protectedProcedure.mutation(async ({ ctx , listingId }) => {
+    return ctx.db.user.update({
+      where: {id : ctx.session.user.id},
+      data : {
+        favorite : {
+          connect : {
+            id : listingId
+          }
+        }
+      }
     });
   }),
   display: publicProcedure.query(async ({ ctx }) => {

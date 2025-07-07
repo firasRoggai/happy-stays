@@ -3,7 +3,7 @@ import Dayjs from "dayjs";
 import { MoreHorizontal } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { Icons } from "~/_components/icons";
+import { Icons } from "~/app/_components/icons";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -13,20 +13,20 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "~/_components/ui/alert-dialog";
-import { Badge } from "~/_components/ui/badge";
-import { Button } from "~/_components/ui/button";
+} from "~/app/_components/ui/alert-dialog";
+import { Badge } from "~/app/_components/ui/badge";
+import { Button } from "~/app/_components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "~/_components/ui/dropdown-menu";
-import { TableCell, TableRow } from "~/_components/ui/table";
-import { toast } from "~/_components/ui/use-toast";
+} from "~/app/_components/ui/dropdown-menu";
+import type { UserReservation } from "./ui/types";
 import { api } from "~/trpc/react";
-import { type UserReservation } from "~/_components/ui/types";
+import { TableCell, TableRow } from "./ui/table";
+import { toast } from "./ui/use-toast";
 interface MyReservationTableRowProps {
   Reservation: UserReservation;
 }
@@ -35,6 +35,7 @@ function MyReservationTableRow({ Reservation }: MyReservationTableRowProps) {
   const start = Dayjs(Reservation.startDate).format("MMM DD, YYYY");
   const end = Dayjs(Reservation.endDate).format("MMM DD, YYYY");
   const imageLink = Reservation.Listing.images[0]
+
     ? Reservation.Listing.images[0].url
     : "/placeholder.png";
   const [showDeleteAlert, setShowDeleteAlert] = React.useState<boolean>(false);

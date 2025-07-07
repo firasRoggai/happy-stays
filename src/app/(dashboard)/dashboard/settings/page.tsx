@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
-import { DashboardHeader } from "~/_components/header";
-import { DashboardShell } from "~/_components/shell";
-import UserNameForm from "~/_components/UserNameForm";
+import DashboardHeader from "~/app/_components/DashboardHeader";
+import { DashboardShell } from "~/app/_components/shell";
+import UserNameForm from "~/app/_components/UserNameForm";
 import { authOptions } from "~/server/auth";
 import { api } from "~/trpc/server";
 

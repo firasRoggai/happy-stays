@@ -1,10 +1,10 @@
 "use client";
-import { EmptyPlaceholder } from "~/_components/empty-placeholder";
-import { DashboardHeader } from "~/_components/header";
-import { Listingcreatebutton } from "~/_components/listing-create-button";
-import { ListingItem } from "~/_components/listing-item";
-import { DashboardShell } from "~/_components/shell";
+import { Listingcreatebutton } from "~/app/_components/listing-create-button";
+import { ListingItem } from "~/app/_components/listing-item";
+import { EmptyPlaceholder } from "~/app/_components/empty-placeholder";
+import { DashboardShell } from "~/app/_components/shell";
 import { api } from "~/trpc/react";
+import DashboardHeader from "~/app/_components/DashboardHeader";
 
 /*
 export const metadata = {

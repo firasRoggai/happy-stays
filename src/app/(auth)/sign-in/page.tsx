@@ -2,9 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Button } from "~/_components/ui/button";
-import { Input } from "~/_components/ui/input";
-import { Label } from "~/_components/ui/label";
+import { Button } from "~/app/_components/ui/button";
 
 export default function Signin() {
   const router = useRouter();

@@ -1,6 +1,6 @@
 import { Map } from "lucide-react";
-import { Button } from "~/_components/ui/button";
 import { darkenedBgImage } from "~/lib/utils";
+import { Button } from "./ui/button";
 
 const InfoBoxes = () => {
   return (

@@ -1,5 +1,5 @@
 import { type User } from "@prisma/client";
-import { Avatar, AvatarFallback, AvatarImage } from "~/_components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "~/app/_components/ui/avatar";
 interface SingleStayProps {
   User: Pick<User, "name" | "email" | "image">;
   amount: number;

@@ -1,12 +1,11 @@
 // UI components / style
-import "~/styles/globals.css";
 import "@uploadthing/react/styles.css";
-import { Toaster } from "~/_components/ui/toaster";
-import NextTopLoader from "nextjs-toploader";
-import { TRPCReactProvider } from "~/trpc/react";
 import { GeistSans } from "geist/font/sans";
-import Image from "next/image";
 import type { Metadata } from "next";
+import NextTopLoader from "nextjs-toploader";
+import "~/styles/globals.css";
+import { TRPCReactProvider } from "~/trpc/react";
+import { Toaster } from "./_components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Happy Stays",

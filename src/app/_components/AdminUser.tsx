@@ -2,32 +2,14 @@
 import Image from "next/image";
 import { MoreHorizontal } from "lucide-react";
 
-import { Badge } from "~/_components/ui/badge";
-import { Button } from "~/_components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "~/_components/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuTrigger,
-} from "~/_components/ui/dropdown-menu";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "~/_components/ui/table";
 import { type User } from "@prisma/client";
 import { formatDate } from "~/lib/utils";
 import { api } from "~/trpc/react";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "./ui/dropdown-menu";
 
 export const UsersRow = () => {
   const { data } = api.user.allusers.useQuery();

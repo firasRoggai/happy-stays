@@ -1,49 +1,32 @@
 "use client";
 import { File, ListFilter } from "lucide-react";
-import { Button } from "~/_components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "~/_components/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "~/_components/ui/dropdown-menu";
-import { Progress } from "~/_components/ui/progress";
-import {
-  Table,
-  TableBody,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "~/_components/ui/table";
+
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "~/_components/ui/tabs";
-import { DashboardShell } from "~/_components/shell";
-import { DashboardHeader } from "~/_components/header";
+} from "~/app/_components/ui/tabs";
+import { DashboardShell } from "~/app/_components/shell";
 import ReservationsTableAdmin from "~/app/_components/ReservationsTableAdmin";
 import { useEffect, useState } from "react";
 import SelectedReservation from "~/app/_components/SelectedReservation";
 import { api } from "~/trpc/react";
-import { type SingleReservation } from "~/_components/ui/types";
+import { type SingleReservation } from "~/app/_components/ui/types";
 import { AdminMonth, AdminWeek } from "~/app/_components/Numbers";
+import DashboardHeader from "~/app/_components/DashboardHeader";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "~/app/_components/ui/card";
+import { Progress } from "@radix-ui/react-progress";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
+import { Button } from "~/app/_components/ui/button";
+import { DropdownMenuCheckboxItem, DropdownMenuSeparator } from "~/app/_components/ui/dropdown-menu";
+import { Table, TableBody, TableHead, TableHeader, TableRow } from "~/app/_components/ui/table";
 
 export default function Reservations() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [currentSelectedReservation, setcurrentSelectedReservation] =
     useState<SingleReservation | null>(null);
+
   const { data: reservation } =
     api.reservation.getSingleReservationDetails.useQuery(selectedId);
 
@@ -55,13 +38,14 @@ export default function Reservations() {
     };
     refetch();
   }, [selectedId, reservation]);
+
   return (
     <DashboardShell>
       <DashboardHeader
         heading="Reservations"
         text="Manage and accept Reservations  ."
       />
-      <main className="grid flex-1 items-start gap-4 sm:py-0 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
+      <main className="grid items-start gap-4 sm:py-0">
         <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-2">
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
             <Card className="sm:col-span-2" x-chunk="dashboard-05-chunk-0">
@@ -177,12 +161,13 @@ export default function Reservations() {
             </TabsContent>
           </Tabs>
         </div>
+      </main>
         <div>
+          
           <SelectedReservation
             currentSelectedReservation={currentSelectedReservation}
           />
         </div>
-      </main>
     </DashboardShell>
   );
 }
