@@ -253,17 +253,13 @@ export const listingrouter = createTRPCRouter({
 
     // temp
     importListings: protectedProcedure
-    .input(z.string().optional()) // Optional input for custom JSON file path
+    .input(z.any().optional()) // Optional input for custom JSON file path
     .mutation(async ({ ctx, input }) => {
-      // Default file path or use the provided input
-      const filePath = input || path.join(process.cwd(), "listings.json");
-
-      // Read and parse the JSON file
-      const data = JSON.parse(readFileSync(filePath, "utf-8"));
+      const data = input;
 
       // Iterate over each listing in the JSON file and create it in the database
       const createdListings = await Promise.all(
-        data.map(async (listing: any) => {
+        data?.map(async (listing: any) => {
           return ctx.db.listing.create({
             data: {
               name: listing.name,

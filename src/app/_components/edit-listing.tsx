@@ -8,7 +8,7 @@ import { AspectRatio } from "./ui/aspect-ratio";
 import { api } from "~/trpc/react";
 
 import { UploadDropzone } from "~/utils/uploadthing";
-import type { ListingEditRequired, listingInput } from "./ui/types";
+import { ListingEditRequired, listingInput } from "./ui/types";
 
 interface ListingFormProps extends React.HTMLAttributes<HTMLFormElement> {
   existingListing: ListingEditRequired;

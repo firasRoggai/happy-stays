@@ -15,6 +15,7 @@ async function getListingForAdmin(listingId: string) {
   return data;
 }
 
+
 interface EditorPageProps {
   params: { listingId: string };
   searchParams: { admin?: string };

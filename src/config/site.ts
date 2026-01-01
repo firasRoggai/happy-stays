@@ -82,7 +82,7 @@ export const foodCardData = [
     },
     {
         title: "Palestinian",
-        img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.UeDZpkUiBG13BAww3Eqh2QHaEK%26pid%3DApi&f=1&ipt=be7a7870a1747c211c089c15e672a1bcfd4517c18718edc211e5e8777d54e6a5&ipo=images",
+        img: "https://lepetitjournal.com/_next/image?url=https:%2F%2Fbackoffice.lepetitjournal.com%2Fsites%2Fdefault%2Ffiles%2Finline-images%2FEl%2520Djenina%2520Alger.jpg&w=828&q=75",
         location: "Algies",
         rating: "4.5 (5000 reviews)",
     }

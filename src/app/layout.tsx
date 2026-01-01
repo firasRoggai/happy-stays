@@ -6,6 +6,7 @@ import NextTopLoader from "nextjs-toploader";
 import "~/styles/globals.css";
 import { TRPCReactProvider } from "~/trpc/react";
 import { Toaster } from "./_components/ui/toaster";
+import { api } from "~/trpc/server";
 
 export const metadata: Metadata = {
   title: "Happy Stays",
@@ -27,6 +28,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en" className={GeistSans.className}>
       <body>

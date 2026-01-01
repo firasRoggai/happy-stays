@@ -1,9 +1,5 @@
 import { MapPin, Star } from "lucide-react";
 import Link from "next/link";
-// import {
-//   Card,
-
-// } from "~/app/_components/ui/card";
 import { api } from "~/trpc/server";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 
